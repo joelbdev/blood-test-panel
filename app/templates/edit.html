@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">
+        {% block title %} Edit Result {{ result.id }}'s Details
+        {% endblock %}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="test">Test Type</label>
+            <input type="text" name="test"
+                   placeholder="Test type">
+            </input>
+        </p>
+
+        <p>
+            <label for="result">Result</label>
+            <input type="text" name="result"
+                   placeholder="Result">
+            </input>
+        </p>
+
+        <p>
+            <label for="date">Date</label>
+            <input type="date" name="date"
+                   placeholder="Defaults to today">
+            </input>
+        </p>
+
+        <p>
+            <label for="flag">Flag</label>
+            <input type="text" name="flag"
+                   placeholder="Can leave blank">
+            </input>
+        </p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}

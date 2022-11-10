@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} Result database ID: {{ result.id }} {% endblock %}</h1>
+    </span>
+    <div class="content">
+            <div class="results">
+                <b>
+                    <p class="name">Test: {{ result.test }} </p>
+                </b>
+                <p>Result: {{ result.result }}</p>
+                <p>Date: {{ result.date }}</p>
+                <p>Flag: {{ result.flag }}</p>
+            </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 style="width: 100%">{% block title %} Add a New Blood Result {% endblock %}</h1>
+<form method="post">
+    <p>
+        <label for="test">Choose a test:</label>
+        <select name="test">
+            <option value="HDL">HDL</option>
+            <option value="LDL">LDL</option>
+            <option value="ALT">ALT</option>
+            <option value="AST">AST</option>
+        </select>
+
+
+    <p>
+        <label for="result">Result</label>
+        <input type="text" name="result" placeholder="Result">
+        </input>
+    </p>
+
+    <p>
+        <label for="date">Date</label>
+        <input type="date" name="date" placeholder="Defaults to today">
+        </input>
+    </p>
+
+    <p>
+        <label for="flag">Flag</label>
+        <input type="text" name="flag" placeholder="Can leave blank">
+        </input>
+    </p>
+
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
+{% endblock %}
