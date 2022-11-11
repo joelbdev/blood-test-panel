@@ -1,48 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ title }}</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-      type="text/css"
-    />
-  </head>
 
-  <body>
-    <center>
-      <h1>Cholesterol</h1>
-    </center>
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+</head>
 
-    <div class="row">
-      <div class="column">
-        <h2>HDL</h2>
-        <canvas id="HDL_Chart" width="600" height="400"></canvas>
-      </div>
+<body>
+  <h1 class="title">Cholesterol</h1>
+  <hr>
 
-      <div class="column">
-        <h2>LDL</h2>
-        <canvas id="LDL_Chart" width="600" height="400"></canvas>
-      </div>
+  <div class="row">
+    <div class="column">
+      <h2>Total</h2>
+      <canvas id="TotC_Chart" width="600" height="400"></canvas>
     </div>
 
-        <center>
-      <h1>Liver</h1>
-    </center>
-
-    <div class="row">
-      <div class="column">
-        <h2>Albumin</h2>
-        <canvas id="Albumin_Chart" width="600" height="400"></canvas>
-      </div>
+    <div class="column">
+      <h2>Trigs</h2>
+      <canvas id="Trigs_Chart" width="600" height="400"></canvas>
     </div>
 
-    {% block javascript %}
-    <script type="text/javascript">
-      {% include "charts.js" %}
-    </script>
-    {% endblock %}
-  </body>
+    <div class="column">
+      <h2>Non-HDL</h2>
+      <canvas id="NonH_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h2>HDL</h2>
+      <canvas id="HDL_Chart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="column">
+      <h2>LDL</h2>
+      <canvas id="LDL_Chart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="column">
+      <h2>Ratio</h2>
+      <canvas id="Ratio_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+  <h1 class="title">Liver</h1>
+  <hr>
+
+  <div class="row">
+    <div class="column">
+      <h2>Albumin</h2>
+      <canvas id="Albumin_Chart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="column">
+      <h2>AST</h2>
+      <canvas id="AST_Chart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="column">
+      <h2>ALT</h2>
+      <canvas id="ALT_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h2>Creatinine</h2>
+      <canvas id="Cre_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+  <h1 class="title">Kidney</h1>
+  <hr>
+
+  <div class="row">
+    <div class="column">
+      <h2>Total Bul</h2>
+      <canvas id="Bul_Chart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="column">
+      <h2>eGFR</h2>
+      <canvas id="GFR_Chart" width="600" height="400"></canvas>
+    </div>
+
+  </div>
+
+  <h1 class="title">Androgens</h1>
+  <hr>
+
+  <div class="row">
+    <div class="column">
+      <h2>Total Test</h2>
+      <canvas id="TotT_Chart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="column">
+      <h2>Free Test</h2>
+      <canvas id="FreeT_Chart" width="600" height="400"></canvas>
+    </div>
+    <div class="column">
+      <h2>Estrogen</h2>
+      <canvas id="Estro_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h2>SHBG</h2>
+      <canvas id="SHBG_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+
+  </div>
+
+
+  <h1 class="title">Other</h1>
+  <hr>
+
+  <div class="row">
+    <div class="column">
+      <h2>CRP</h2>
+      <canvas id="CRP_Chart" width="600" height="400"></canvas>
+    </div>
+    <div class="column">
+      <h2>Vit D</h2>
+      <canvas id="VitD_Chart" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+  {% block javascript %}
+  <script type="text/javascript">
+    {% include "charts.js" %}
+  </script>
+  {% endblock %}
+</body>
+
 </html>

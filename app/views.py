@@ -12,7 +12,7 @@ def index():
 @app.route('/line')
 def line():
     #https://www.digitalocean.com/community/tutorials/how-to-query-tables-and-paginate-data-in-flask-sqlalchemy#step-3-filtering-records-using-logical-conditions
-    test_results = Results.query.order_by(Results.test.asc()).all()
+    test_results = Results.query.all()
     return render_template('line_chart.html', title='Cholesterol', max=100, data=test_results)
 
 @app.route('/<int:result_id>/')
