@@ -3,6 +3,8 @@
 {% block content %}
 <h1 style="width: 100%">{% block title %} Add a New Blood Result {% endblock %}</h1>
 <form method="post">
+<div class="results">
+
     <p>
         <label for="test">Choose a test:</label>
         <select name="test">
@@ -11,8 +13,6 @@
             <option value="ALT">ALT</option>
             <option value="AST">AST</option>
         </select>
-
-
     <p>
         <label for="result">Result</label>
         <input type="text" name="result" placeholder="Result">
@@ -36,4 +36,5 @@
         <button type="submit">Submit</button>
     </p>
 </form>
+</div>
 {% endblock %}

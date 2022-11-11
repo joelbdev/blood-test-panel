@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <center>
+      <h1>Cholesterol</h1>
+    </center>
+
+    <div class="row">
+      <div class="column">
+        <h2>HDL</h2>
+        <canvas id="HDL_Chart" width="600" height="400"></canvas>
+      </div>
+
+      <div class="column">
+        <h2>LDL</h2>
+        <canvas id="LDL_Chart" width="600" height="400"></canvas>
+      </div>
+    </div>
+
+        <center>
+      <h1>Liver</h1>
+    </center>
+
+    <div class="row">
+      <div class="column">
+        <h2>Albumin</h2>
+        <canvas id="Albumin_Chart" width="600" height="400"></canvas>
+      </div>
+    </div>
+
+    {% block javascript %}
+    <script type="text/javascript">
+      {% include "charts.js" %}
+    </script>
+    {% endblock %}
+  </body>
+</html>

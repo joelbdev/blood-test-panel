@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Graph testing {% endblock %}</h1>
+    <div class="content">
+        {% for result in test_results %}
+            <div class="results">
+                <p>Result: {{ result.result }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
