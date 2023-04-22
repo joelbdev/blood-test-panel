@@ -1,3 +1,5 @@
+A simple webapp for storing blood test results and graphing changes over time.
+
 # db_tutorial
 https://www.digitalocean.com/community/tutorials/how-to-use-flask-sqlalchemy-to-interact-with-databases-in-a-flask-application
 https://www.digitalocean.com/community/tutorials/how-to-query-tables-and-paginate-data-in-flask-sqlalchemy 
